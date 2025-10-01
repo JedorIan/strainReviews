@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Reviews</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Product Reviews</h1>
+
+  <div id="average-rating"></div>
+
+  <h2>Write a Review</h2>
+  <form id="review-form">
+    <label>Username: <input type="text" id="username" required></label><br><br>
+
+    <div class="rating-category" data-category="quality">
+      <label>Quality:</label>
+      <div class="stars" id="stars-quality"></div>
+    </div>
+    <div class="rating-category" data-category="value">
+      <label>Value:</label>
+      <div class="stars" id="stars-value"></div>
+    </div>
+    <div class="rating-category" data-category="usability">
+      <label>Usability:</label>
+      <div class="stars" id="stars-usability"></div>
+    </div>
+    <div class="rating-category" data-category="design">
+      <label>Design:</label>
+      <div class="stars" id="stars-design"></div>
+    </div>
+    <div class="rating-category" data-category="support">
+      <label>Support:</label>
+      <div class="stars" id="stars-support"></div>
+    </div>
+
+    <label>Review:</label><br>
+    <textarea id="textReview" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <h2>All Reviews</h2>
+  <div id="reviews-list"></div>
+
+  <script src="app.js"></script>
+<p><a href="account.html">My Account</a></p>
+</body>
+</html>
