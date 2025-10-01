@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <title>Product 3</title>
+  <script src="../frontend/product.js"></script>
+  <style>
+    .star { font-size: 24px; cursor: pointer; color: #ccc; }
+    .star.selected { color: gold; }
+  </style>
+</head>
+<body>
+  <h1 id="product-name">Product 3</h1>
+  <p id="product-description">This is the third sample product.</p>
+  <p id="review-count"></p>
+
+  <h3>Average Ratings</h3>
+  <p id="overall-rating"></p>
+  <ul id="average-ratings"></ul>
+
+  <h2>Reviews</h2>
+  <label for="sort-reviews">Sort by:</label>
+  <select id="sort-reviews">
+    <option value="newest">Newest</option>
+    <option value="oldest">Oldest</option>
+    <option value="highest">Highest Overall</option>
+    <option value="lowest">Lowest Overall</option>
+  </select>
+  <ul id="review-list"></ul>
+
+  <h2>Leave a Review</h2>
+  <form id="review-form">
+    <input type="text" id="username" placeholder="Your name" required><br><br>
+    <textarea id="textReview" placeholder="Write your review" required></textarea><br><br>
+
+    <div class="rating-input"><label>Quality:</label> <span class="stars" data-category="quality"></span></div>
+    <div class="rating-input"><label>Value:</label> <span class="stars" data-category="value"></span></div>
+    <div class="rating-input"><label>Usability:</label> <span class="stars" data-category="usability"></span></div>
+    <div class="rating-input"><label>Design:</label> <span class="stars" data-category="design"></span></div>
+    <div class="rating-input"><label>Support:</label> <span class="stars" data-category="support"></span></div>
+
+    <br>
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <script>
+    const productId = 3;
+    loadProduct(productId);
+    setupStarInputs();
+  </script>
+</body>
+</html>
